@@ -1,4 +1,3 @@
-
 # Streaming TFTP Server for node.js
 
 <http://tools.ietf.org/html/rfc1350>
@@ -11,7 +10,7 @@ var tftp = require("tftp");
 
 tftp.createServer(function(req, res) {
 
-  var filePath = __dirname + "/tftpboot/" + req.path;
+  var filePath = "/var/lib/tftpboot/" + req.path;
   fs.createReadStream(filePath).pipe(res);
 
 }).bind(1234);
