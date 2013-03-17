@@ -44,11 +44,7 @@ function createServer(handler) {
 
   });
 
-  return {
-    bind: function() {
-      server.bind.apply(server, arguments);
-    }
-  };
+  return server;
 
 }
 
